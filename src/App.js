@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from './components/Navbar/Navbar';
+import 'antd/dist/antd.min.css'
+// import Signin from './components/Signin/Signin';
+import Home from './components/Home/Home'
+import Contact from './components/Contact/Contact'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Post from './components/Post/Post';
+import { Footer } from 'antd/lib/layout/layout';
+import SinglePost from './components/SinglePost/SinglePost';
+import Overview from './components/Overview/Overview';
+import Signin from './components/Signin/Signin';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+    <Navbar/>
+
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="post" element={<Post />}/>
+        <Route path="post/:id" element={<SinglePost />}/>
+        <Route path="contact" element={<Contact />}>
+           <Route path="overview" element={<Overview />}/>
+        </Route>
+      </Routes>
+        <Footer/>
+    </BrowserRouter>
+    {/* <Signin/> */}
+    </>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.signin_wrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "a  b";
+}
+
+.left_side_info {
+    grid-area: a;
+    padding: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-image: url('signin.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: azure;
+    text-transform: uppercase;
+    font-weight: 800;
+    width: 100%;
+}
+
+.left_info h2 {
+    font-size: 3.5rem;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-weight: 800;
+}
+.left_info p {
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+.right_form_area{
+    grid-area: b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+
+    margin: 20px;
+    max-width: 500px;
+    padding: 16px;
+    background-color: white;
+  }
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background-color: #ddd !important;
+    border: .1rem solid #ddd;
+}
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd !important;
+    outline: none;
+  }
+  .logoandtext img{
+      width: 150px;
+  }
+  .logoandtext {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.logoandtext h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+    
+  /* Set a style for the submit button */
+  .btn {
+    background-color:goldenrod;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
+  
+
+@media screen and (max-width:600px) {
+    .signin_wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "b "
+        "a";
+    }
+    .left_info {
+     
+    
+    }
+    .left_info h2 {
+        font-size: 1.9rem;
+        font-weight: 600;
+    }
+    .left_info p {
+         font-size: 1rem;
+         color: #ffffff;
+    }
+}
+
+
+
+
+
+  /* @media (min-width: 320px) {
+    .signin_wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "b "
+        "a";
+    }
+    .left_info {
+        flex-basis: 500px;
+    
+    }
+    .left_info h2 {
+        font-size: 1.9rem;
+        font-weight: 600;
+    }
+    .left_info p {
+         font-size: .6rem;
+    }
+  } */
+
+
+  
+  @media (min-width: 768px) {
+   
+  }
